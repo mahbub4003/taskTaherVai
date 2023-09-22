@@ -1,10 +1,11 @@
-const span = () => {
+const appendSpansToDiv = () => {
   const div1 = document.getElementsByClassName("background")[0];
-  const span = document.createElement("span");
-  div1.appendChild(span);
-  return div1;
+
+  for (let i = 1; i < 100; i++) {
+    const span = document.createElement("span");
+    div1.appendChild(span);
+  }
 };
-// console.log(span());
-for (var i = 1; i < 100; i++) {
-  return span();
-}
+
+// Call the function to append the spans to the div
+appendSpansToDiv();
